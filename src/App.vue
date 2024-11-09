@@ -1,5 +1,5 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
+  <img alt="Vue logo" src="./assets/媳妇儿多多.png">
   <HelloWorld msg="音乐分享平台哈哈哈"/>
 </template>
 

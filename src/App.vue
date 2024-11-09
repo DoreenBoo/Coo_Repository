@@ -1,6 +1,6 @@
 <template>
-  <img alt="Vue logo"  style= "width: 200px;" src="./assets/loge.jpg">
-  <HelloWorld msg="音乐分享平台哈哈哈"/>
+  <img alt="Vue logo"  style= "width: 200px;" src="./assets/logo.jpg">
+  <HelloWorld msg="音乐分享平台"/>
 </template>
 
 <script>

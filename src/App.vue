@@ -1,6 +1,6 @@
 <template>
   <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="音乐分享平台"/>
+  <HelloWorld msg="音乐分享平台哈哈哈"/>
 </template>
 
 <script>

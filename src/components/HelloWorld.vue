@@ -1,46 +1,51 @@
 <template>
-  <div class="hello">
-    <h1>{{ msg }}</h1>
-    <p>
-      For a guide and recipes on how to configure / customize this project,<br>
-      check out the
-      <a href="https://cli.vuejs.org" target="_blank" rel="noopener">vue-cli documentation</a>.
-    </p>
-    <h3>Installed CLI Plugins</h3>
-    <ul>
-      <li><a href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-babel" target="_blank" rel="noopener">babel</a></li>
-      <li><a href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-eslint" target="_blank" rel="noopener">eslint</a></li>
-    </ul>
-    <h3>Essential Links</h3>
-    <ul>
-      <li><a href="https://vuejs.org" target="_blank" rel="noopener">Core Docs</a></li>
-      <li><a href="https://forum.vuejs.org" target="_blank" rel="noopener">Forum</a></li>
-      <li><a href="https://chat.vuejs.org" target="_blank" rel="noopener">Community Chat</a></li>
-      <li><a href="https://twitter.com/vuejs" target="_blank" rel="noopener">Twitter</a></li>
-      <li><a href="https://news.vuejs.org" target="_blank" rel="noopener">News</a></li>
-    </ul>
-    <h3>Ecosystem</h3>
-    <ul>
-      <li><a href="https://router.vuejs.org" target="_blank" rel="noopener">vue-router</a></li>
-      <li><a href="https://vuex.vuejs.org" target="_blank" rel="noopener">vuex</a></li>
-      <li><a href="https://github.com/vuejs/vue-devtools#vue-devtools" target="_blank" rel="noopener">vue-devtools</a></li>
-      <li><a href="https://vue-loader.vuejs.org" target="_blank" rel="noopener">vue-loader</a></li>
-      <li><a href="https://github.com/vuejs/awesome-vue" target="_blank" rel="noopener">awesome-vue</a></li>
-    </ul>
+  <div class="hello" >
+    <h1>{{ title }}</h1>
+    <!-- 自定义按钮颜色 -->
+<el-button class="custom-button"  plain>GetStart <el-icon><TopRight /></el-icon></el-button>
+    
   </div>
 </template>
 
-<script>
+<script >
+
+
 export default {
-  name: 'HelloWorld',
+  name: 'HelloWorld', // 这里是组件的名称
   props: {
-    msg: String
-  }
+    title: String
+  },
+
 }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+h1{
+  color:rgb(254, 67, 101);
+   font-size: 200px;
+   font-family: '三极泼墨体';
+    font-weight: 300;/* 字体粗细 */
+}
+
+.custom-button {
+  background-color: rgb(249, 205, 173); /* 默认背景颜色 */
+  color: white;
+  border-color: rgb(249, 205, 173); /* 默认边框颜色 */
+  transition: background-color 0.3s, border-color 0.3s; /* 添加平滑过渡效果 */
+  font-size: 40px; /* 设置字体大小 */
+   padding: 30px 60px; /* 调整按钮的内边距来放大按钮 */
+}
+
+/* 鼠标悬停时的背景颜色 */
+.custom-button:hover {
+  background-color: rgb(254, 67, 101);
+  border-color: rgb(254, 67, 101); /* 悬停时改变边框颜色 */
+}
+
+
+
+
 h3 {
   margin: 40px 0 0;
 }

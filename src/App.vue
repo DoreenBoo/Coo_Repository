@@ -5,7 +5,8 @@
   <HelloOFY title="ONLY FOR YOU "/>
   <!-- Vue Router 显示匹配到的组件 -->
   <div id="app">
-    <router-view></router-view> <!-- 这里用于显示匹配到的路由组件 -->
+      <router-view></router-view> <!-- 这里用于显示匹配到的路由组件 -->
+    
   </div>
 </template>
 
@@ -32,4 +33,5 @@ body {
   color: #2c3e50;
   margin-top: 60px;
 }
+
 </style>

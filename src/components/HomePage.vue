@@ -1,7 +1,6 @@
 <template>
-  <!-- <div class="common-layout"> -->
   <el-container>
-    <!-- <el-header> -->
+    <el-header>
       <el-row :gutter="15">
         <!-- 分类 -->
         <el-col :span="6">
@@ -24,20 +23,20 @@
           <button class="niceButton">我的</button>
         </el-col>
       </el-row>
-    <!-- </el-header> -->
+    </el-header>
 
     <el-main>
-      main
-      <!--           <el-carousel :interval="4000" type="card" height="200px">
+      <!-- 走马灯 -->
+        <el-carousel :interval="4000" type="card" height="200px">
     <el-carousel-item v-for="item in 6" :key="item">
       <h3 text="2xl" justify="center">{{ item }}</h3>
     </el-carousel-item>
-  </el-carousel> -->
+  </el-carousel>
+
     </el-main>
 
     <el-footer>Footer</el-footer>
   </el-container>
-  <!-- </div> -->
 </template>
 
 
@@ -51,7 +50,7 @@ export default {
 
 
 <style scoped>
-/* .el-carousel__item h3 {
+.el-carousel__item h3 {
   color: #475669;
   opacity: 0.75;
   line-height: 200px;
@@ -65,7 +64,7 @@ export default {
 
 .el-carousel__item:nth-child(2n + 1) {
   background-color: #d3dce6;
-} */
+}
 .button-row {
   display: flex;
   justify-content: space-between;

@@ -2,6 +2,7 @@
   <!-- 图标位于页面右下角 -->
   <img alt="Vue logo" style="width: 20px; position: fixed; bottom: 20px; right: 20px;" src="./assets/images/icon.png">
 
+  
   <HelloOFY title="ONLY FOR YOU "/>
   <!-- Vue Router 显示匹配到的组件 -->
   <div id="app">

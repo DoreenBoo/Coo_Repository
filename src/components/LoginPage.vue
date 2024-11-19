@@ -6,7 +6,7 @@
             <div class="form-wrapper">
                 <input type="text" name="username" placeholder="username" class="input-item">
                 <input type="password" name="password" placeholder="password" class="input-item">
-                <div class="btn">Login</div>
+                <button class="btn">Login</button>
             </div>
             <div class="msg">
                 Don't have account?
@@ -23,24 +23,6 @@ export default {
 </script>
 
 <style scoped>
-/* * {
-     margin: 0;
-     padding: 0;
- } */
-
- /* html {
-     height: 100%;
- }
-
- body {
-     height: 100%;
- } */
-
- /* .container {
-     height: 100%;
-     background-image: linear-gradient(to right, #fbc2eb, #a6c1ee);
- } */
-
  .login-wrapper {
      background-color: rgb(249, 205, 173);
      width: 358px;
@@ -80,7 +62,8 @@ export default {
      padding: 10px;
      width: 100%;
      margin-top: 40px;
-     background-color:  rgb(254, 67, 101);
+     background-color:  rgb(254, 67, 101); 
+       border-color: rgb(254, 67, 101) ;
      color: #fff;
       border-radius: 40px;
  }

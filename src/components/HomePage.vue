@@ -1,10 +1,14 @@
 <template>
   <div class="common-layout">
     <el-container>
-      <el-header>Header</el-header>
+      <el-header>
+        Header
+      </el-header>
       <el-container>
 
-        <el-aside width="200px">Aside</el-aside>
+        <el-aside width="200px">
+          Aside
+        </el-aside>
         <el-container>
 
           <el-main>
@@ -16,6 +20,7 @@
           </el-main>
           
           <el-footer>Footer</el-footer>
+          
         </el-container>
       </el-container>
     </el-container>
@@ -33,6 +38,8 @@ export default {
 
 
 <style scoped>
+
+/* 走马灯style */
 .el-carousel__item h3 {
   color: #475669;
   opacity: 0.75;
@@ -42,33 +49,11 @@ export default {
 }
 
 .el-carousel__item:nth-child(2n) {
-  background-color: #99a9bf;
+  background-color: #99a9bf;    /* 后面要改成图片 */
 }
 
 .el-carousel__item:nth-child(2n + 1) {
-  background-color: #d3dce6;
-}
-.button-row {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.el-row {
-  margin-bottom: 20px;
-}
-
-.el-row:last-child {
-  margin-bottom: 0;
-}
-
-.el-col {
-  border-radius: 4px;
-}
-
-.grid-content {
-  border-radius: 4px;
-  min-height: 36px;
+  background-color: #d3dce6;   /* 后面要改成图片 */
 }
 
 </style>

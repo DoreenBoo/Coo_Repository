@@ -6,18 +6,15 @@
       <router-link to="/login">
         <el-button class="custom-button" >GetStart <el-icon><TopRight /></el-icon></el-button>
       </router-link>
-
     
   </div>
 </template>
 
 <script >
-
-
 export default {
   name: 'HelloOFY', // 这里是组件的名称
   props: {
-    title: String
+    title: String  
   },
 
 }

@@ -3,7 +3,7 @@
     <h1>{{ title }}</h1>
     <!-- 自定义按钮颜色 -->
        <!-- 使用 router-link 跳转 -->
-      <router-link to="/home">
+      <router-link to="/login">
         <el-button class="custom-button" >GetStart <el-icon><TopRight /></el-icon></el-button>
       </router-link>
 

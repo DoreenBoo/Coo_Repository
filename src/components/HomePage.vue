@@ -89,7 +89,6 @@
       </el-container>
     </el-container>
   </div>
-
 </template>
 
 
@@ -137,11 +136,56 @@ Aside
 }
 
 .el-carousel__item:nth-child(2n) {
-  background-color: #99a9bf;    /* 后面要改成图片 */
+  background-color: #99a9bf;
 }
 
 .el-carousel__item:nth-child(2n + 1) {
-  background-color: #d3dce6;   /* 后面要改成图片 */
+  background-color: #d3dce6;
+}
+.button-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
+.el-row {
+  margin-bottom: 20px;
+}
+
+.el-row:last-child {
+  margin-bottom: 0;
+}
+
+.el-col {
+  border-radius: 4px;
+}
+
+.grid-content {
+  border-radius: 4px;
+  min-height: 36px;
+}
+
+
+.niceButton {
+  /* 让按钮宽度填满列 */
+  width: 100%;
+  background-color: rgb(254, 67, 101);
+  border: none;
+  border-radius: 12px;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  /* display: inline-block; */
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  transition-duration: 0.4s;
+  -webkit-transition-duration: 0.4s;
+}
+
+.niceButton:hover {
+  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, .24),
+    0 17px 50px 0 rgba(0, 0, 0, .19);
+}
 </style>

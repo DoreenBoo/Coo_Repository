@@ -1,6 +1,6 @@
 <template>
 <div class="common-layout">
-    <el-container style="height: 500px; border: 1px solid #eee;">
+    <el-container style="height: 800px; border: 1px solid #eee;">
       <el-header>
         <el-menu
     :default-active="activeIndex"
@@ -8,7 +8,7 @@
     mode="horizontal"
     @select="handleSelect"
   >
-    <el-menu-item index="1">Processing Center</el-menu-item>
+    <el-menu-item index="1">首页</el-menu-item>
     <el-sub-menu index="2">
       <template #title>Workspace</template>
       <el-menu-item index="2-1">item one</el-menu-item>
@@ -21,7 +21,12 @@
         <el-menu-item index="2-4-3">item three</el-menu-item>
       </el-sub-menu>
     </el-sub-menu>
-    <el-menu-item index="3" disabled>Info</el-menu-item>
+    <el-menu-item index="3" >    <el-input
+      v-model="input2"
+      style="width: 240px"
+      placeholder="搜索"
+      :prefix-icon="Search"
+    /></el-menu-item>
     <el-menu-item index="4">Orders</el-menu-item>
   </el-menu>
       </el-header>
@@ -29,7 +34,7 @@
 
 
       <el-container>
-        <el-aside width="200px">
+        <el-aside width="200px" >
                    <el-radio-group v-model="isCollapse" style="margin-bottom: 20px">
     <el-radio-button :value="false">expand</el-radio-button>
     <el-radio-button :value="true">collapse</el-radio-button>

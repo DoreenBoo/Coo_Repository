@@ -1,14 +1,14 @@
 <template>
 <div class="common-layout">
     <el-container style="height: 800px; border: 1px solid #eee;">
-      <el-header>
+      <el-header class="header">
         <el-menu
     :default-active="activeIndex"
     class="el-menu-demo"
     mode="horizontal"
     @select="handleSelect"
   >
-    <el-menu-item index="1">首页</el-menu-item>
+    <el-menu-item index="1">HomePage</el-menu-item>
     <el-sub-menu index="2">
       <template #title>Workspace</template>
       <el-menu-item index="2-1">item one</el-menu-item>
@@ -21,10 +21,11 @@
         <el-menu-item index="2-4-3">item three</el-menu-item>
       </el-sub-menu>
     </el-sub-menu>
+    <!-- 搜索框 -->
     <el-menu-item index="3" >    <el-input
       v-model="input2"
       style="width: 240px"
-      placeholder="搜索"
+      placeholder="Search"
       :prefix-icon="Search"
     /></el-menu-item>
     <el-menu-item index="4">Orders</el-menu-item>
@@ -35,48 +36,42 @@
 
       <el-container>
         <el-aside width="200px" >
-                   <el-radio-group v-model="isCollapse" style="margin-bottom: 20px">
-    <el-radio-button :value="false">expand</el-radio-button>
-    <el-radio-button :value="true">collapse</el-radio-button>
-  </el-radio-group>
   <el-menu
-    default-active="2"
-    class="el-menu-vertical-demo"
-    :collapse="isCollapse"
-    @open="handleOpen"
-    @close="handleClose"
-  >
-    <el-sub-menu index="1">
-      <template #title>
-        <el-icon><location /></el-icon>
-        <span>Navigator One</span>
-      </template>
-      <el-menu-item-group>
-        <template #title><span>Group One</span></template>
-        <el-menu-item index="1-1">item one</el-menu-item>
-        <el-menu-item index="1-2">item two</el-menu-item>
-      </el-menu-item-group>
-      <el-menu-item-group title="Group Two">
-        <el-menu-item index="1-3">item three</el-menu-item>
-      </el-menu-item-group>
-      <el-sub-menu index="1-4">
-        <template #title><span>item four</span></template>
-        <el-menu-item index="1-4-1">item one</el-menu-item>
-      </el-sub-menu>
-    </el-sub-menu>
-    <el-menu-item index="2">
-      <el-icon><icon-menu /></el-icon>
-      <template #title>Navigator Two</template>
-    </el-menu-item>
-    <el-menu-item index="3" disabled>
-      <el-icon><document /></el-icon>
-      <template #title>Navigator Three</template>
-    </el-menu-item>
-    <el-menu-item index="4">
-      <el-icon><setting /></el-icon>
-      <template #title>Navigator Four</template>
-    </el-menu-item>
-  </el-menu>
+        default-active="2"
+        class="el-menu-vertical-demo"
+        @open="handleOpen"
+        @close="handleClose"
+      >
+        <el-sub-menu index="1">
+          <template #title>
+            <el-icon><location /></el-icon>
+            <span>Navigator One</span>
+          </template>
+          <el-menu-item-group title="Group One">
+            <el-menu-item index="1-1">item one</el-menu-item>
+            <el-menu-item index="1-2">item two</el-menu-item>
+          </el-menu-item-group>
+          <el-menu-item-group title="Group Two">
+            <el-menu-item index="1-3">item three</el-menu-item>
+          </el-menu-item-group>
+          <el-sub-menu index="1-4">
+            <template #title>item four</template>
+            <el-menu-item index="1-4-1">item one</el-menu-item>
+          </el-sub-menu>
+        </el-sub-menu>
+        <el-menu-item index="2">
+          <el-icon><icon-menu /></el-icon>
+          <span>Navigator Two</span>
+        </el-menu-item>
+        <el-menu-item index="3" disabled>
+          <el-icon><document /></el-icon>
+          <span>Navigator Three</span>
+        </el-menu-item>
+        <el-menu-item index="4">
+          <el-icon><setting /></el-icon>
+          <span>Navigator Four</span>
+        </el-menu-item>
+      </el-menu>
         </el-aside>
         <el-container>
           
@@ -87,7 +82,13 @@
     </el-carousel-item>
   </el-carousel>
           </el-main>
-          <el-footer>Footer</el-footer>
+
+          <!-- 播放器 -->
+          <el-footer>
+            <div  class="footer" >
+
+            </div>
+          </el-footer>
         </el-container>
 
 
@@ -107,17 +108,31 @@ export default {
 .container{
     display: flex; /* 启用 Flex 布局 */
     flex-direction: column;
-    /* align-items: center; */  
+    border-radius: 20px; /* 矩形边角圆润 */
     
 }
 .page-aside{
   width: 200px;
   height: 600px;
+  border-radius: 20px; /* 矩形边角圆润 */
 }
 .page-main{
-  width: 1000px;
+  width: 1200px;
+  border-radius: 20px; /* 矩形边角圆润 */
 }
 
+/*
+header 
+ */
+.header{
+  padding: 0; /* 去掉默认的内边距 */
+}
+
+.el-menu-demo {
+  width:100%;
+  border-radius: 20px; /* 菜单本身也可以带些圆角 */
+  padding: 0 10px;
+}
 
 /* 
 Aside 
@@ -125,8 +140,28 @@ Aside
 
 .el-menu-vertical-demo:not(.el-menu--collapse) {
   width: 200px;
-  min-height: 400px;
+  min-height: 700px;
+  border-radius: 20px; /* 矩形边角圆润 */
+  margin-top: 20px;
 }
+
+/*
+footer
+*/
+.el-footer {
+  padding: 0; /* 去掉默认内边距 */
+}
+
+
+/* 
+.footer{
+  width: 100%;
+  height: 100px;
+  background-color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 20px; 
+}
+ */
 
 
 
